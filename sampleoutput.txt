@@ -1,0 +1,93 @@
+/*
+printReply([]).
+ sorry, i do not understand. can you ask something else?
+true.
+printReply([kimchi]).
+ sorry, i do not understand. can you ask something else?
+true.
+
+printReply([you, are, smart]).
+ let us not talk about me.
+true.
+printReply([you, have, dog]).
+ let us not talk about me.
+true.
+
+printReply([i, love, nightmare]).
+ do nightmares frighten you?
+true
+printReply([nightmare, is, here]).
+ do nightmares frighten you?
+true.
+
+printReply([will, it, begin, ?]).
+ why do you ask?
+true.
+printReply([can, i, have, it, ?]).
+ why do you ask?
+true.
+
+printReply([i, am, good]).
+ why are you good?
+true.
+printReply([i, am, going, to, work]).
+ why are you going to work?
+true.
+
+printReply([i, was, a, good, fisher]).
+ why were you a good fisher?
+true.
+printReply([i, was, going, to, home]).
+ why were you going to home?
+true.
+
+printReply([i, can, swim]).
+ why can you swim?
+true.
+printReply([i, can, be, your, father]).
+ why can you be my father?
+true.
+
+printReply([i, will, merry, you]).
+ why will you merry me?
+true.
+printReply([he, will, come, to, me]).
+ sorry, i do not understand. can you ask something else?
+true.
+% Only allows 'i', so it is showing right result.
+
+printReply([i,cannot,fly]).
+ are you sure you cannot fly?
+true.
+printReply(["can't", i, hug, you, ?]).
+ let us not talk about me.
+true.
+% Wrong result is showing up when it ends with question mark because it read 'you' first. However it is not a big deal
+
+printReply([my, dog, is, cute]).
+ why your dog is cute?
+true.
+printReply([my, dog, is, stronger, than, my, cat]).
+ why your dog is stronger than your cat?
+true.
+
+printReply([i, feel, great]).
+ what makes you feel great?
+true.
+printReply([do, you, feel, me,?]).
+ let us not talk about me.
+true.
+% Wrong result is showing up when it ends with question mark because it read 'you' first.
+
+printReply([i, fantasised, my, future, wife]).
+ have you ever fantasised your future wife before?
+true.
+printReply([i, have, never, fantasised, hell]).
+ sorry, i do not understand. can you ask something else?
+true.
+% right result because there isn't case that covering "have", "never"
+
+I find it is better use a pattern than using a single keyword to do the task.
+It is more safe for every cases and if it is not covered by our cases we can return "sorry, i do not understand. can you ask something else?"
+
+*/
